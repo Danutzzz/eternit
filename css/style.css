@@ -1,0 +1,280 @@
+* {
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+    font-family: "Bebas Neue" !important;
+    overflow-x: hidden;
+}
+body{
+    overflow-x: hidden;
+    overflow-y: hidden;
+    letter-spacing: 2px;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 8px;
+    z-index: 9999;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #d9d9d9;
+    max-width: 1800px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50px;
+}
+
+.navbar>img {
+    width: 50px;
+    border-radius: 50%;
+}
+.navbar>svg{
+    width: 35px;
+    margin-right: 8px;
+    display: none;
+    cursor: pointer;
+    transition: all 0.3s  ease-in-out;
+
+}
+.navbar>svg:hover{
+    opacity: 0.6;
+}
+
+nav {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+.navbar_links {
+    display: flex;
+    gap: 16px;
+    margin: 0 auto;
+    list-style: none;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 23px;
+    transition: opacity 0.5s ease;
+}
+.navbar_links>a>li{
+    letter-spacing: 1px !important;
+    transition: all 0.3s  ease-in-out;
+
+}
+
+.navbar_links>a>li:hover {
+    opacity: 0.5;
+
+}
+
+.hero>video{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+.hero {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+.blur_section {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: hidden;
+}
+.blur1{
+    background-color: #ffffff;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    border-radius: 50%;
+    top:80%;
+    -webkit-filter: blur(130px);
+}
+.blur2{
+    background-color: #fff;
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    left: 95%;
+    border-radius: 50%;
+    -webkit-filter: blur(150px);
+}
+/*Products card eternity */
+.Products{
+    background-image: url(../assets/images/general/pattern.png);
+    
+}
+.Products_title{
+    color: fff;
+    padding: 15px;
+    font-size: 40px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.Cards_products_stock {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 46px;
+    overflow-y: hidden;
+}
+
+.card {
+    width: 377px;
+    height: 500px;
+    background-color: #d9d9d9;
+    border-radius: 50px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-content: center;
+
+}
+
+.card_img img {
+    width: 300px;
+    height: 340px;
+    background-color: #d9d9d9;
+    border-radius: 50px;
+    overflow: hidden;
+    display: flex;
+}
+.card_button{
+    background-color: #000;
+    padding:20px 30px 20px 30px  ;
+    border-radius: 0 0px 30px 30px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+.card_button>a{
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 500;
+
+}
+.card_button:hover{
+    background-color: #4b4b4b;
+}
+.Cards_products_nostock{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 46px;
+    overflow-y: hidden;
+}
+.card_button_nostock{
+    background-color: #797979;
+    padding:20px 30px 20px 30px  ;
+    border-radius: 0 0px 30px 30px;
+    transition: all 0.5s;
+    cursor: not-allowed;
+}
+.card_button_nostock>a{
+    color: #cecece;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: not-allowed;
+}
+.card_text_nostock{
+    color: #797979;
+    cursor: not-allowed;
+}
+
+@media only screen and (max-width: 1800px) {
+    .navbar{
+        max-width: 1700px;
+    }
+
+}
+@media only screen and (max-width: 1600px) {
+    .navbar{
+        max-width: 1500px;
+    }
+
+}
+@media only screen and (max-width: 1400px) {
+    .navbar{
+        max-width: 1300px;
+    }
+
+}
+@media only screen and (max-width: 1300px) {
+    .navbar{
+        max-width: 1200px;
+    }
+    .Cards_products_stock, .Cards_products_nostock{
+        flex-direction: column;
+        align-content: space-around;
+        flex-wrap: wrap;
+    }
+
+
+}
+
+@media only screen and (max-width: 1200px) {
+    .navbar{
+        max-width: 1100px;
+    }
+
+
+}
+@media only screen and (max-width: 1000px) {
+    .navbar{
+        max-width: 900px;
+    }
+
+}
+@media only screen and (max-width: 550px) {
+    .navbar_links{
+        display: none;
+    } 
+    .navbar>svg{
+        display: block;
+    }  
+    .navbar{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .navbar_links {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media only screen and (max-width: 400px) {
+    .card{
+        width: 250px;
+        height: 400px;
+    }
+    .card_img img {
+        width: 200px;
+        height: 240px;
+    }
+}
